@@ -2553,7 +2553,7 @@ var LZMA = (function () {
         if (sync) {
             this$static.d = $LZMAByteArrayDecompressor({}, byte_arr);
             while ($processChunk(this$static.d.chunker));
-            return decode($toByteArray(this$static.d.output));
+            return ($toByteArray(this$static.d.output));
         }
         
         try {
@@ -2588,7 +2588,7 @@ var LZMA = (function () {
                 
                 on_progress(1);
                 
-                res = decode($toByteArray(this$static.d.output));
+                res = ($toByteArray(this$static.d.output));
                 
                 /// delay so we don’t catch errors from the on_finish handler
                 wait(on_finish.bind(null, res), 0);
